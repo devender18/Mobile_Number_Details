@@ -1,6 +1,8 @@
+#required modules
 import phonenumbers
 from phonenumbers import timezone, carrier, geocoder
 
+# asking number from user
 number = input("Enter the number with +<country code>: ")
 
 phone = phonenumbers.parse(number)
@@ -8,6 +10,7 @@ time = timezone.time_zones_for_number(phone)
 car = carrier.name_for_number(phone,"en")
 reg  = geocoder.description_for_number(phone,"en")
 
+#printing statements
 print(phone)
 print(time)
 print(car)
